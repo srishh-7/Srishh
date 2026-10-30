@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/submit.php">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name">
+        </div>
+        <div>
+            <label for="age"> Age:</label>
+            <input type="number" id="age" placeholder="Enter Age" name="age">
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="Phone">Phone:</label>
+            <input type="tel" id="Phone" name="Phone" placeholder="Enter Phone">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+
+        </div>
+        <div>
+            <label for="Dob">Date of Birth:</label>
+            <input type="date" id="Dob" name="Dob">
+        </div>
+        <div>
+            <label for="subscription">Subscription:</label>
+            <input type="radio" name="Subscription" value="basic">
+            <label for="basic">Basic</label>
+            <input type="radio" name="Subscription" value="premium">
+            <label for="premium">Premium</label>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+</body>
+
+</html>
