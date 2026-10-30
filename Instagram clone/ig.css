@@ -1,0 +1,36 @@
+.pfp{
+    border-radius:25px ;
+    object-fit: cover;
+}
+
+.Side-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 17%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    padding: 20px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    padding: 18px;
+    margin-right: 290px;
+}
+
+.right-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 17%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding: 20px;
+}

@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ff5200, #ff7a00);
+    color: #222;
+    overflow-x: hidden;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: linear-gradient(135deg, #ff5200, #ff7a00);
+    padding: 18px 7%;
+    box-shadow: 0 5px 20px rgba(255, 82, 0, 0.25);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul li:first-child img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/* ================= TOP IMAGES ================= */
+
+main > div:first-child {
+    height: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+main > div:first-child > div {
+    position: absolute;
+    top: 0;
+}
+
+main > div:first-child > div:first-child {
+    left: 5%;
+}
+
+main > div:first-child > div:nth-child(2) {
+    right: 5%;
+}
+
+main > div:first-child img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+main > div:first-child > div:nth-child(2) img {
+    animation-delay: 1s;
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= HEADING ================= */
+
+.sc-caVxnN {
+    max-width: 850px;
+    margin-top: -20px;
+    margin: 20px auto 45px;
+    padding: 0 20px;
+
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.15;
+    font-weight: 800;
+
+    color: white;
+
+    animation: headingAnimation 1s ease;
+}
+div[class="sc-caVxnN jKxDXt"] {
+    color: white !important;
+}
+
+
+@keyframes headingAnimation {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= INPUT SECTION ================= */
+
+/* This targets the div containing both input boxes */
+
+main > div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 70px;
+    padding: 0 20px;
+}
+
+
+/* Individual input container */
+
+main > div:nth-child(3) > div {
+    position: relative;
+}
+
+
+/* Inputs */
+
+input {
+    width: 330px;
+    height: 60px;
+
+    padding: 0 20px;
+
+    border: 2px solid transparent;
+    border-radius: 15px;
+
+    background: white;
+
+    outline: none;
+
+    font-size: 15px;
+
+    box-shadow: 0 8px 25px rgba(255, 82, 0, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+
+input:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(255, 82, 0, 0.2);
+}
+
+
+input:focus {
+    border-color: #ff5200;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 82, 0, 0.12),
+        0 10px 30px rgba(255, 82, 0, 0.2);
+
+    transform: translateY(-3px);
+}
+
+
+input::placeholder {
+    color: #888;
+}
+
+
+/* ================= SERVICE IMAGES ================= */
+
+main > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    padding: 0 30px 80px;
+}
+
+
+main > div:nth-child(4) > div {
+    width: 280px;
+    height: 220px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-shadow: 0 10px 30px rgba(255, 82, 0, 0.1);
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition: all 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+main > div:nth-child(4) > div.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+main > div:nth-child(4) > div:hover {
+    transform: translateY(-12px) scale(1.03);
+
+    box-shadow: 0 20px 40px rgba(255, 82, 0, 0.25);
+}
+
+
+main > div:nth-child(4) img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+}
+
+
+main > div:nth-child(4) > div:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    height: 100px;
+
+    background: linear-gradient(135deg, #ff5200, #ff7a00);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main > div:first-child img {
+        width: 230px;
+        height: 230px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li:first-child {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul li:first-child img {
+        margin: auto;
+    }
+
+
+    main {
+        padding-top: 30px;
+    }
+
+
+    main > div:first-child {
+        height: 180px;
+    }
+
+    main > div:first-child img {
+        width: 160px;
+        height: 160px;
+    }
+
+    main > div:first-child > div:first-child {
+        left: 0;
+    }
+
+    main > div:first-child > div:nth-child(2) {
+        right: 0;
+    }
+
+
+    /* Inputs stack on mobile */
+
+    main > div:nth-child(3) {
+        flex-direction: column;
+    }
+
+    input {
+        width: 90vw;
+        max-width: 400px;
+    }
+
+
+    /* Service cards stack */
+
+    main > div:nth-child(4) {
+        flex-direction: column;
+    }
+
+    main > div:nth-child(4) > div {
+        width: 85%;
+        max-width: 350px;
+    }
+
+
+}
